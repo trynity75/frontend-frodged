@@ -1,0 +1,91 @@
+.landing-sidebar {
+  display: grid;
+  grid-template-rows: 2fr 5fr 3fr;
+  width: 30%;
+  height: 100vh;
+  background-color: var(--bg-light);
+}
+
+.logo {
+  font-family: "Playwrite US Trad", cursive;
+  font-size: 2.5rem;
+  align-content: end;
+  text-align: center;
+}
+
+.logo a {
+  color: var(--green-light);
+}
+
+.logo a:hover{
+  color: var(--blue-light);
+}
+
+.sidebar-text {
+  font-family: "Space Grotesk", system-ui;
+  font-size: 12px;
+  padding: 16px;
+  align-content: center;
+}
+
+.sidebar-text h2 {
+  text-align: center;
+}
+
+.landing-buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.signup-button {
+  background-color: var(--bg-light);
+  color: var(--red-light);
+  border: solid 1px var(--red-light);
+  border-radius: 16px;
+  width: 45%;
+  align-self: center;
+  padding: 4px 8px;
+  transition: 0.2s;
+}
+
+.signup-button:hover {
+  background-color: var(--red-light);
+  color: var(--bg-light);
+}
+
+.login-button {
+  background-color: var(--bg-light);
+  color: var(--blue-light);
+  border: solid 1px var(--blue-light);
+  border-radius: 16px;
+  width: 45%;
+  align-self: center;
+  padding: 4px 8px;
+  transition: 0.2s;
+}
+
+.login-button:hover {
+  background-color: var(--blue-light);
+  color: var(--bg-light);
+}
+
+.continue-button {
+  background-color: var(--bg-light);
+  color: var(--green-light);
+  border: solid 1px var(--green-light);
+  font-size: 12px;
+  border-radius: 16px;
+  width: 45%;
+  align-self: center;
+  padding: 4px 8px;
+  transition: 0.2s;
+}
+
+.continue-button:hover {
+  background-color: var(--green-light);
+  color: var(--bg-light);
+}

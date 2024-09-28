@@ -1,0 +1,116 @@
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    background-color: var(--bg-light);
+}
+
+.navbar div {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0px 24px;
+    gap: 16px;
+}
+
+.logo {
+    font-family: "Playwrite US Trad", cursive;
+    font-size: 1.5rem;
+    color: var(--green-light);
+}
+
+.logo:hover {
+    color: var(--red-light);
+}
+
+.nav-buttons {
+    justify-content: end;
+}
+
+.nav-register-button {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-light);
+    color: var(--red-light);
+    border: 1px solid;
+    font-size: 14px;
+    padding: 2px 16px;
+    height: 32px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    align-content: center;
+    transition: 0.3s;
+}
+
+.nav-login-button {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--blue-light);
+    color: white;
+    border: 2px solid var(--blue-light);
+    font-size: 14px;
+    padding: 2px 16px;
+    height: 32px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    align-content: center;
+    transition: 0.3s;
+}
+
+.nav-register-button:hover {
+    background-color: var(--red-light);
+    color: white;
+}
+
+.nav-login-button:hover {
+    background-color: var(--blue-dark);
+    border: 2px solid var(--blue-dark);
+}
+
+.nav-logout-button {
+    font-family: "Poppins", sans-serif;
+        background-color: var(--blue-light);
+        color: white;
+        border: 2px solid var(--blue-light);
+        font-size: 14px;
+        padding: 2px 16px;
+        height: 32px;
+        border-radius: 16px;
+        box-sizing: border-box;
+        align-content: center;
+        transition: 0.3s;
+}
+
+.nav-logout-button:hover {
+    background-color: var(--red-light);
+    border: 2px solid var(--red-light);
+}
+
+.section-buttons {
+    justify-content: end;
+    margin-right: 13%;
+}
+
+.section-buttons button {
+    font-family: "Poppins", sans-serif;
+    padding: 4px 8px;
+    width: 150px;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.section-buttons button:hover {
+    background-color: var(--red-light);
+    border: 1px solid var(--red-light);
+}
+
+.products-button,
+.recipes-button {
+    border: 1px solid var(--green-light);
+    background-color: var(--green-light);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}

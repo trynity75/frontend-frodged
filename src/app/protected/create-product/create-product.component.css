@@ -1,0 +1,280 @@
+/* h2 {
+  padding: 20px;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Space Grotesk", system-ui;
+}
+#form {
+  display: inline-flexbox;
+  text-align: center;
+  background-color: #f7f4ea;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 20px;
+}
+.form-title {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+}
+
+.create-product {
+    display: flex;
+    width: 110vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 16px -6px rgb(73, 73, 73);
+    -moz-box-shadow: 0px 0px 16px -6px rgb(73, 73, 73);
+    box-shadow: 0px 0px 16px -6px rgb(41, 41, 41);
+}
+
+.form-one {
+  display: block;
+  width: 80%;
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  background-color: #f2f2f2;
+  font-family: "Space Grotesk", system-ui;
+}
+.form-two {
+  display: block;
+  width: 80%;
+  height: 80px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  background-color: #f2f2f2;
+  font-family: "Space Grotesk", system-ui;
+}
+
+
+.checkbox-perecedero {
+  display: flex;
+  position: relative;
+  left: 210px;
+  align-items: center;
+}
+.checkbox-perecedero p {
+  font-family: "Space Grotesk", system-ui;
+  margin-right: 15px;
+}
+
+.checkbox-vegetarian {
+  display: flex;
+  position: relative;
+  left: 210px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checkbox-vegetarian p {
+  font-family: "Space Grotesk", system-ui;
+  margin-right: 10px;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+
+
+.Registrar_action {
+  font-weight: 800;
+  position: relative;
+  left: 180px;
+  bottom: 10px;
+  color: white;
+  border-style: none;
+  background-color: #D72638;
+  width: 210px;
+  height: 30px;
+  border-radius: 30px;
+} */
+
+#create-product {
+  background-color: var(--bg-light);
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  background-color: var(--bg-light);
+  font-family: "Space Grotesk", system-ui;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 32px;
+}
+
+.create-product_form {
+  width: 90vw;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  align-self: center;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  border-radius: 16px;
+  margin-bottom: 34px;
+}
+
+.form-one,
+.form-two {
+  background-color: var(--grey-light);
+  padding: 8px;
+  border-radius: 16px;
+  border: none;
+}
+
+
+.form-one {
+  height: 2rem;
+}
+
+.form-two {
+  height: 9rem;
+}
+
+.checkbox-perecedero {
+  display: flex;
+  position: relative;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.checkbox-perecedero p {
+  margin-right: 15px;
+}
+
+.checkbox-vegetarian {
+  display: flex;
+  position: relative;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.checkbox-vegetarian p {
+  margin-right: 15px;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #007bff;
+}
+
+input:checked+.slider:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+
+.submit-product {
+  align-self: flex-end;
+}
+
+.register-button {
+  border: 1px solid var(--red-light);
+  padding: 8px 16px;
+  background-color: var(--red-light);
+  color: white;
+  border-radius: 16px;
+}

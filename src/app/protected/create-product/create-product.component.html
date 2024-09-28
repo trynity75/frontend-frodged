@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+	<div id="create-product">
+		<!-- Formulario -->
+		<form class="create-product" (ngSubmit)="onSubmit()">
+			<h2>Crear nuevo producto:</h2>
+			<!-- Contenedor del Formulario -->
+			<div class="create-product_form">
+				<input class="form-one" type="text" [(ngModel)]="product.imageurl" name="imageurl" placeholder="URL de Imagen">
+				<input class="form-one" type="text" [(ngModel)]="product.name" name="Nombre" placeholder="Nombre">
+				<input class="form-one" type="text" [(ngModel)]="product.type" name="Tipo" placeholder="Tipo">
+				<input class="form-two" type="text" [(ngModel)]="product.description" name="Descripcion" placeholder="Descripcion">
+				<input class="form-two" type="text" [(ngModel)]="product.conservation" name="Conservacion" placeholder="Conservacion">
+				
+				<div class="checkbox-vegetarian">
+					<p>Vegetariano</p>
+					<label class="switch">
+						<input type="checkbox" [(ngModel)]="product.vegetarian" name="Vegetariano" (change)="onVegetarianChange($event)">
+						<span class="slider"></span>
+					</label>
+				</div>
+				<div class="checkbox-perecedero">
+					<p>Perecedero</p>
+					<label class="switch">
+						<input type="checkbox" [(ngModel)]="product.perishable" name="Perecedero" (change)="onPerishableChange($event)">
+						<span class="slider"></span>
+					</label>
+				</div>
+				<div class="submit-product">
+							<button class="register-button" type="submit">Registrar en base de datos</button>
+				</div>
+			</div>
+		</form>
+	</div>

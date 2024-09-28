@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<div id="create-recipe"> 
+
+    <form  class="create-recipe" (ngSubmit)="onSubmit()" [formGroup]="form">
+        <h2>Crear nueva receta</h2>
+        
+        <div class="create-recipe_form">
+            
+            <input class="form-one" formControlName="name"  type="text" placeholder="Nombre">
+            <input class="form-one" formControlName="imageurl" type="text" placeholder="URL de imagen">
+            <input class="form-one" formControlName="ingredients" type="text" placeholder="Ingredientes">
+            <input class="form-two" formControlName="preparation" type="text"  placeholder="Preparacion">
+            <input class="form-one" formControlName="category" type="text" name="Categoria" placeholder="Categoria">
+
+            <div class="checkbox-vegetarian">
+            <p>Vegetariano</p>
+                <label class="switch">
+                    <input type="checkbox" formControlName="vegetarian">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <br>
+
+            <input type="submit" value="Registrar en base de datos" class="Registrar_action">
+        </div>
+
+    </form>
+</div>

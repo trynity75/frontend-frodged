@@ -1,0 +1,340 @@
+.products-container {
+  height: 100vh;
+  background-color: var(--bg-light);
+}
+
+.products-main {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--bg-light);
+}
+
+.searchbar {
+  border: none;
+}
+
+.searchinput {
+  border: none;
+  padding: 8px;
+  border-radius: 16px 0 0 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.searchinput::placeholder {
+  color: var(--grey-dark);
+  padding-left: 16px;
+}
+
+.searchinput:focus {
+  outline: 1px solid var(--green-light);
+}
+
+.searchbutton {
+  border: none;
+  padding: 8px;
+  background: white;
+  cursor: pointer;
+  border-left: 1px solid var(--grey-light);
+  border-radius: 0 16px 16px 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.searchbutton i {
+  padding-right: 8px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+
+.dropdown-btn {
+  background-color: var(--bg-light);
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-btn span {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--green-light);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.product-card {
+  display: flex;
+  gap: 16px;
+  padding: 8px;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  justify-content: space-between;
+}
+
+.product-card h3 {
+  text-transform: capitalize;
+}
+
+.product-card img {
+  height: 36px;
+  padding-left: 16px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+}
+
+.product-card-right,
+.product-card-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-card-right {
+  padding-right: 8px;
+}
+
+.product-card-right button {
+  padding: 4px 16px;
+  border-radius: 16px;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 28px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 14px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+.toggle-switch:checked+.switch-label .slider {
+  background-color: #2196F3;
+}
+
+.toggle-switch:checked+.switch-label .slider:before {
+  transform: translateX(22px);
+}
+
+.recipes-button {
+  border: solid 1px var(--green-light);
+  background-color: white;
+  color: var(--green-light);
+  height: 28px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.recipes-button:hover {
+  background-color: var(--green-light);
+  color: white;
+}
+
+.recipes-button:focus {
+  opacity: 0.75;
+}
+
+.info-button {
+  border: solid 1px var(--red-light);
+  background-color: white;
+  color: var(--red-light);
+  height: 28px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.info-button:hover {
+  background-color: var(--red-light);
+  color: white;
+}
+
+.info-button:focus {
+  opacity: 0.75;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal-content h2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+
+.modal-content img {
+  max-width: 250px;
+  max-height: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.modal-conservation {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.modal-content p {
+  font-family: "Space Grotesk", system-ui;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+.modal-content button {
+  border: solid 1px var(--green-light);
+  background-color: white;
+  color: var(--green-light);
+  height: 28px;
+  transition: 0.2s;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 4px 8px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.modal-content button:hover {
+  background-color: var(--green-light);
+  color: white;
+}
+
+.modal-content button:focus {
+  opacity: 0.75;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-button:hover {
+  color: #555;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: var(--grey-light);
+  border-radius: 8px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: var(--green-light);
+  border-radius: 8px;
+  border: 2px solid #f1f1f1;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

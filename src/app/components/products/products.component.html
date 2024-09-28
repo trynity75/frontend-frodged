@@ -1,0 +1,54 @@
+<div class="products-container">
+  <app-navbar></app-navbar>
+  <div class="products-main">
+    <div class="searchbar">
+      <input class="searchinput" placeholder="Busca Productos" type="text">
+      <button class="searchbutton"><i class="fa-solid fa-magnifying-glass fa-lg"
+          style="color: var(--grey-dark);"></i></button>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-btn">Filtrar Por:<span>&#9662;</span></button>
+      <div class="dropdown-content">
+        <a href="#">Proteinas</a>
+        <a href="#">Frutas</a>
+        <a href="#">Verduras</a>
+        <a href="#">Vegetariano</a>
+      </div>
+    </div>
+    <div class="products-list"  *ngFor="let product of allProducts">
+      <div class="product-card">
+        <div class="product-card-left">
+          <img [src]=product.imageurl alt="">
+          <h3>{{product.name}}</h3>
+        </div>
+        <div class="product-card-right">
+          <div class="switch-container">
+            <input [ngModel]="boolFunction(product.name)" (change)="cambiaso($event, product.name)" type="checkbox" [id]="product.name" class="toggle-switch">
+            <label [for]="product.name" class="switch-label">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <button class="recipes-button" (click)="goToRecipesWithProductName(product.name)">Recetas</button>
+          <button class="info-button" (click)="openModal(product)">Información</button>
+        </div>
+      </div>    
+      
+    </div>
+  </div>
+
+  <div id="productModal" class="modal" *ngIf="selectedProduct">
+    <div class="modal-content">
+      <span class="close-button" (click)="closeModal()">&times;</span>
+      <h2>{{selectedProduct.name}}</h2>
+      <img [src]="selectedProduct.imageurl" alt="{{selectedProduct.name}}">
+      <p>{{selectedProduct.type}}</p>
+      <h3 class="modal-description">Descripción: {{selectedProduct.description}}</h3>
+      <h3 class="modal-conservation">Conservación: {{selectedProduct.conservation}}</h3>
+      <button class="recipes-with" (click)="goToRecipesWithProductName(selectedProduct.name)">Recetas con
+        {{selectedProduct.name}}</button>
+    </div>
+  </div>
+  <div class="modal-overlay" *ngIf="selectedProduct"></div>
+
+</div>

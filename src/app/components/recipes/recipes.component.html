@@ -1,0 +1,42 @@
+<div class="recipes-container">
+  <app-navbar></app-navbar>
+  <div class="recipes-main">
+    <div class="searchbar">
+      <input class="searchinput" placeholder="Busca Recetas" type="text">
+      <button class="searchbutton"><i class="fa-solid fa-magnifying-glass fa-lg"
+          style="color: var(--grey-dark);"></i></button>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-btn">Filtrar Por:<span>&#9662;</span></button>
+      <div class="dropdown-content">
+        <a href="#">Desayuno</a>
+        <a href="#">Almuerzo</a>
+        <a href="#">Cena</a>
+        <a href="#">Vegetariano</a>
+      </div>
+    </div>
+    <div class="recipes-grid">
+      <div *ngFor="let recipe of allRecipes" class="recipe-card">
+        <div class="recipe-card_img">
+          <img [src]="recipe.imageurl" [alt]="recipe.name">
+        </div>
+        <div class="recipe-card_info">
+          <h3>{{recipe.name}}</h3>
+          <button class="view-button" (click)="openModal(recipe)">Ver Receta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="recipeModal" class="modal" *ngIf="selectedRecipe">
+    <div class="modal-content">
+      <span class="close-button" (click)="closeModal()">&times;</span>
+      <h2>{{selectedRecipe.name}}</h2>
+      <img [src]="selectedRecipe.imageurl" alt="{{selectedRecipe.name}}">
+      <h4>Ingredientes: {{selectedRecipe.ingredients}}</h4>
+      <h4>Categoría: {{selectedRecipe.category}}</h4>
+      <p>{{selectedRecipe.preparation}}</p>
+    </div>
+  </div>
+  <div class="modal-overlay" *ngIf="selectedRecipe"></div>
+</div>

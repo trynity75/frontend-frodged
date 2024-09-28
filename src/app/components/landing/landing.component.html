@@ -1,0 +1,31 @@
+
+<div class="landing-container">
+  <app-landing-carousel></app-landing-carousel>
+  <div *ngIf="isRegisterMode" class="register-sidebar">
+    <div class="logo">
+      <a href="">Frodge</a>
+    </div>
+    <form (ngSubmit)="registerUser()" class="register-primary">
+      <input [(ngModel)]="email" class="email-input" placeholder="Correo Electrónico" type="email" name="email">
+      <input [(ngModel)]="password" class="password-input" placeholder="Contraseña" type="password" name="password">
+      <button class="register-button" type="submit">Crear cuenta</button>
+      <button class="login-button" (click)="toggleMode()" routerLink="/auth/login">Ya tengo una cuenta</button>
+    </form>
+  </div>
+
+
+  <div *ngIf="!isRegisterMode" class="login-sidebar">
+    <div class="logo">
+      <a href="">Frodge</a>
+    </div>
+      <form (ngSubmit)="loginUser()" class="login-primary">
+        <input [(ngModel)]="email" class="email-input" placeholder="Correo Electrónico" type="email" name="email">
+        <input [(ngModel)]="password" class="password-input" placeholder="Contraseña" type="password" name="password">
+      <button class="login-button" (click)="toggleMode()" type="submit" href="">Iniciar Sesión</button>
+    </form>
+    <div class="login-secondary">
+      <a class="recovery-button" href="">Olvidaste tu contraseña?</a>
+      <button class="signup-button" (click)="toggleMode()" routerLink="/auth/register" href="">Crear cuenta</button>
+    </div>
+  </div>
+</div>
